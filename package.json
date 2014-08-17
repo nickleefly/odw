@@ -1,0 +1,20 @@
+{
+  "name": "node_odw",
+  "version": "0.0.1",
+  "description": "odw mysql project",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "keywords": [
+    "odw",
+    "movies",
+    "ratings"
+  ],
+  "author": "Xiuyu Li <nickleefly@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.4.2",
+    "tap": "^0.4.12"
+  }
+}
