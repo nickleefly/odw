@@ -4,6 +4,7 @@
   "description": "odw mysql project",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "tap test/*.js"
   },
   "keywords": [
@@ -14,6 +15,8 @@
   "author": "Xiuyu Li <nickleefly@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.8.5",
     "mysql": "^2.4.2",
     "tap": "^0.4.12"
   }
