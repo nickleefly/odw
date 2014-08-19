@@ -4,7 +4,7 @@
   "description": "odw mysql project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "test": "tap test/*.js"
   },
   "keywords": [
