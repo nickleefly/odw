@@ -11,7 +11,7 @@
     <%for(var i = 0; i < listing.length; i++) {
       var item = listing[i];
     %>
-      <li>rating count for <%=item.movie_id%> is <%=item.rcount%>, average rating is <%=item.ravg%></li>
+      <li>rating count for <span style="color: indigo;"><%=item.movie_title%></span> is <span style="color: red;"><%=item.rcount%></span> which movie id is <span style="color: green;"><%=item.movie_id%></span>, average rating is <span style="font-weight: bold"><%=item.ravg%></span></li>
     <%}%>
     </ul>
   </body>
