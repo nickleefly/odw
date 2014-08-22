@@ -19,8 +19,3 @@ homeModel.prototype.topAvgRating = function(callback) {
     callback(err, data);
   });
 }
-
-//Get user info by userId
-homeModel.prototype.GetUserInfo = function(userId, callback){
-
-};
