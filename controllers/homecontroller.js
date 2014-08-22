@@ -8,8 +8,9 @@ exports.controller = function(req, res) {
     var homeModel = new HomeModel();
     homeModel.topTenAvgRating(function(err, model){
         model.title = homeModel.title;
-        console.log(model)
-        res.send(model);
+        model.listing = homeModel.listing;
+console.log(model)
+        res.render('index.ejs', model);
     });
     // res.render('index', { title: 'Express' });
 }

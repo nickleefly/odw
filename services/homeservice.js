@@ -17,7 +17,7 @@ var HomeService = function() {
         *@return Error to the callback function
         */
         GetTopTenAvgRating: function(callback) {
-            var query = "select * from (select count(rating) as rcount, avg(rating) as ravg, movie_id from ratings group by movie_id) as a order by rcount desc limit 10;";
+            var query = "select * from (select count(rating) as rcount, avg(rating) as ravg, movie_id from ratings group by movie_id) as a order by rcount desc;";
 
             mysql.ExecuteQuery(query, function(err, e){
                 callback(err, e);

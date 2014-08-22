@@ -7,5 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ul>
+    <%for(var i = 0; i < listing.length; i++) {
+      var item = listing[i];
+    %>
+      <li>rating count for <%=item.movie_id%> is <%=item.rcount%>, average rating is <%=item.ravg%></li>
+    <%}%>
+    </ul>
   </body>
 </html>
