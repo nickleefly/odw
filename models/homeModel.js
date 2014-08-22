@@ -7,17 +7,17 @@ Provides the models for the application
 
 module.exports = homeModel;
 function homeModel(){
-    this.title = 'ODW';
-    this.listing = [];
+  this.title = 'ODW';
+  this.listing = [];
 }
 
 //Get top ten rating
-homeModel.prototype.topTenAvgRating = function(callback) {
-    var self = this;
-    homeService.GetTopTenAvgRating(function(err, data) {
-        self.listing = data;
-        callback(err, data);
-    })
+homeModel.prototype.topAvgRating = function(callback) {
+  var self = this;
+  homeService.GetTopAvgRating(function(err, data) {
+    self.listing = data;
+    callback(err, data);
+  });
 }
 
 //Get user info by userId
