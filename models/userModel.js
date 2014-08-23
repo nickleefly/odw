@@ -12,9 +12,9 @@ function userModel(){
 }
 
 //Get top ten rating
-userModel.prototype.GetAvgRatingForGenre = function(callback) {
+userModel.prototype.GetAvgRatingForGenre = function(gender, callback) {
   var self = this;
-  userService.GetAvgRatingForGenre(function(err, data) {
+  userService.GetAvgRatingForGenre(gender, function(err, data) {
     self.listing = data;
     callback(err, data);
   });
