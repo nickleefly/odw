@@ -6,7 +6,7 @@ Provides the controllers for the application views
 **/
 exports.controller = function(req, res) {
   var userModel = new UserModel();
-  userModel.GetAvgRatingForGenre(function(err, model){
+  userModel.GetAvgRatingForGenre('', function(err, model){
     model.title = userModel.title;
     model.listing = userModel.listing;
     res.render('user.ejs', model);
