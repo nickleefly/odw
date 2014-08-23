@@ -15,7 +15,6 @@ exports.controller = function(req, res) {
   graphModel.GetData(function(err, model){
     model.title = graphModel.title;
     model.listing = graphModel.listing;
-    //{"id":4,"release_date":"1995-01-01T08:00:00.000Z","movie_title":"Get Shorty (1995)","rating":3,"genre":"unknown","postalCode":"85711"}
     for (var i = 0; i < graphModel.listing.length; i ++) {
       var item = graphModel.listing[i];
       var listingData = item.id + ',' +
@@ -24,7 +23,7 @@ exports.controller = function(req, res) {
         item.rating + ',' +
         item.genre + ',' +
         item.postalCode + '\n';
-      wstream.write(listingData);
+        wstream.write(listingData);
     }
     wstream.end();
     return res.send(model);
