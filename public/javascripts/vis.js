@@ -255,9 +255,8 @@
       var movies;
       d3.select('#tooltip').classed('hidden', true);
       movies = body.selectAll(".movie").selectAll("circle").attr("opacity", 0.85);
-      return body.select("#crosshairs").remove();
-    };
-    d3.csv("stream-data.csv", render_vis);
+      return body.select("#crosshairs").remove(
+    d3.csv("/Users/nick/Documents/odw/node_odw/public/stream-data.csv", render_vis);
     update = function() {
       update_data();
       draw_movies();
