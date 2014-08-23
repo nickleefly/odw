@@ -7,7 +7,7 @@ var mysql = require('../configs/env.js');
 * @class HomeService
 * @constructor
 */
-var HomeService = function() {
+var GraphService = function() {
   var namespace = {
     /**
     * Returns top avg rating
@@ -16,8 +16,8 @@ var HomeService = function() {
     *@param callback Callback function to be called when finished
     *@return Error to the callback function
     */
-    GetTopAvgRatingService: function(callback) {
-      var query = "select * from (select count(rating) as rcount, sum(rating) as rsum, avg(rating) as ravg, movie_id, m.movie_title as movie_title from ratings inner join movies m on m.id = ratings.movie_id group by movie_id) as a order by rcount;";
+    GetDataService: function(callback) {
+      var query = "select m.id, m.release_date, m.movie_title, r.rating, g.genre, u.postalCode from movies m inner join genres_movies gm on gm.movies_id = m.id inner join genres g on gm.genres_id = g.id inner join ratings r on r.movie_id = m.id inner join users u on u.id = r.id limit 10";
 
       mysql.ExecuteQuery(query, function(err, e){
         callback(err, e);
@@ -27,4 +27,4 @@ var HomeService = function() {
   return namespace;
 }();
 
-module.exports = HomeService;
+module.exports = GraphService;
