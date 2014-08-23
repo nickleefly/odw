@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>By Female</p>
+    <ul>
+    <%for(var i = 0; i < listing.length; i++) {
+      var item = listing[i];
+    %>
+      <li>rating count for <span style="color: indigo;"><%=item.genre_name%></span> is <span style="color: red;"><%=item.rating_count%></span>, average rating is <span style="font-weight: bold"><%=item.rating_avg%></span></li>
+    <%}%>
+    </ul>
+  </body>
+</html>
