@@ -10,7 +10,6 @@ exports.controller = function(req, res) {
   userModel.GetAvgRatingForGenre(function(err, model){
     model.title = userModel.title;
     model.listing = userModel.listing;
-    // return res.send(model)
     res.render('user.ejs', model);
   });
 }
