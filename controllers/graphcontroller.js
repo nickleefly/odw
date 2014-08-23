@@ -28,6 +28,6 @@ exports.controller = function(req, res) {
     }
     wstream.end();
     return res.send(model);
-    res.render('user.ejs', model);
+    res.render('graph.ejs', model);
   });
 }
