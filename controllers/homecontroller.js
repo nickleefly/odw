@@ -6,9 +6,8 @@ Provides the controllers for the application views
 **/
 exports.controller = function(req, res) {
   var homeModel = new HomeModel();
-  homeModel.topAvgRating(function(err, model){
-    model.title = homeModel.title;
-    model.listing = homeModel.listing;
-    res.render('index.ejs', model);
+  homeModel.topAvgRating(function(err, data){
+    homeModel.listing = data;
+    res.render('index.ejs', homeModel);
   });
 }

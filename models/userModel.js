@@ -15,7 +15,6 @@ function userModel(){
 userModel.prototype.GetAvgRatingForGenre = function(gender, callback) {
   var self = this;
   userService.GetAvgRatingForGenreService(gender, function(err, data) {
-    self.listing = data;
     callback(err, data);
   });
 }

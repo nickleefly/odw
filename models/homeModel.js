@@ -15,7 +15,6 @@ function homeModel(){
 homeModel.prototype.topAvgRating = function(callback) {
   var self = this;
   homeService.GetTopAvgRatingService(function(err, data) {
-    self.listing = data;
     callback(err, data);
   });
 }
