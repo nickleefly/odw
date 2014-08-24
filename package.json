@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "tap test/*.js"
+    "test": "mocha --recursive test/ --timeout 10000"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
@@ -26,6 +26,8 @@
   "author": "Xiuyu Li <nickleefly@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "tap": "^0.4.12"
+    "mocha": "^1.21.4",
+    "request": "^2.40.0",
+    "should": "^4.0.4"
   }
 }
