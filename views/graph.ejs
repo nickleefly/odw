@@ -31,18 +31,26 @@
     </ul>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script type="text/javascript">var listingData = <%-JSON.stringify(listing)%>;</script>
   <script type="text/javascript">
+    var categoriesValue = [];
+    var dataValue = [];
+    for (var i = 0; i < listingData.length; i++) {
+      var item = listingData[i];
+      categoriesValue.push(item.postalCode);
+      dataValue.push(item.ratings_sum);
+    }
     $(function () {
         $('#container').highcharts({
             xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                categories: categoriesValue
             },
             title: {
                 text: 'Highcharts Total Rating Count in Zipcode'
             },
             series: [{
-                data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-                name: 'Total Count'
+                data: dataValue,
+                name: 'Total Rating Count in current Zipcode'
             }]
         });
     });
