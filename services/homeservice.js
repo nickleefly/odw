@@ -19,7 +19,7 @@ var HomeService = function() {
     GetTopAvgRatingService: function(callback) {
       var query = "select * from (select count(rating) as rcount, sum(rating) as rsum, avg(rating) as ravg, movie_id, m.movie_title as movie_title from ratings inner join movies m on m.id = ratings.movie_id group by movie_id) as a order by rcount;";
 
-      mysql.ExecuteQuery(query, function(err, e){
+      mysql.ExecuteQuery(query, function(err, e) {
         callback(err, e);
       });
     }

@@ -21,7 +21,7 @@ var UserService = function() {
       if(gender)
         query = "select count(r.rating) as rating_count, sum(r.rating) as rating_sum, avg(r.rating) as rating_avg, g.genre as genre_name from ratings r inner join genres_movies gm on gm.movies_id = r.movie_id inner join genres g on g.id = gm.genres_id inner join users u on u.id = r.id where u.gender ='" + gender + "' group by g.genre;";
 
-      mysql.ExecuteQuery(query, function(err, e){
+      mysql.ExecuteQuery(query, function(err, e) {
         callback(err, e);
       });
     }
