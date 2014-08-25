@@ -171,11 +171,11 @@ for convenient I exported the database into sql/odw.sql
 
 ## run `npm start`
 
-* visit `http://localhost:3000` home page
-* visit `http://localhost:3000/users` for user page
-	* visit `http://localhost:3000/users/m` for male
-	* visit `http://localhost:3000/users/f` for female
-* visit `http://localhost:3000/graph` for a graph -- I am using sum rating in a zipcode for displaying
+* visit [http://localhost:3000](http://localhost:3000) home page
+* visit h[ttp://localhost:3000/users](http://localhost:3000/users) for user page
+	* visit [http://localhost:3000/users/m](http://localhost:3000/users/m) for male
+	* visit [http://localhost:3000/users/f](http://localhost:3000/users/f) for female
+* visit [http://localhost:3000/graph](http://localhost:3000/graph) for a graph -- I am using sum rating in a zipcode for displaying
 
 ## run `npm test` to test when the application is running
 
