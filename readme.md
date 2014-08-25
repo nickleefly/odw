@@ -10,7 +10,7 @@ for convenient I exported the database into sql/odw.sql
 
 ## save excel into csv files, load into database
  * load genres table
- 
+
 ```
 DROP TABLE genres;
 CREATE TABLE genres(
@@ -28,7 +28,7 @@ ignore 1 lines
 ```
 
  * load movies table
- 
+
  ```
  DROP TABLE movies;
 CREATE TABLE movies(
@@ -87,9 +87,9 @@ ignore 1 lines
 SET release_date = STR_TO_DATE(@release_date, '%d-%b-%Y');
 
 ```
- 
+
  * load occupations table
- 
+
  ```
  DROP TABLE occupations;
 CREATE TABLE occupations(
@@ -178,5 +178,7 @@ CREATE TABLE genres_movies(
 	* visit `http://localhost:3000/users/f` for female
 * visit `http://localhost:3000/graph` for a graph -- I am using sum rating in a zipcode for displaying
 
+## run `npm test` to test when the application is running
 
- 
+
+
