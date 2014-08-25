@@ -1,8 +1,4 @@
-# ODW
-
----
-for convenient I exported the database into sql/odw.sql
----
+# ODW steps to create the database
 
 ## create odw database
 
@@ -164,6 +160,13 @@ CREATE TABLE genres_movies(
 > use following script to generate insert script for genres_movies table
 > `select concat('insert into genres_movies select id, ', id, ' from movies m where m.', genre , ' = 1;') from genres;`
 
+# step to run application
+
+---
+for convenient I exported the database into sql/odw.sql
+---
+
+## copy `configs/env-sample.js` into `configs/env.js`, change your database password
 ## run `npm install` in project directory
 
 ## run `npm start`
