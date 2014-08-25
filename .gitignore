@@ -2,6 +2,7 @@ npm-debug.log
 
 /node_modules
 stream-data.csv
+configs/env.js
 
 *.sublime-*
 
