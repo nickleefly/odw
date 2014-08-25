@@ -17,7 +17,6 @@ CREATE TABLE genres(
   id INTEGER(2) NOT NULL PRIMARY KEY
   , genre VARCHAR(11)
 );
-
 LOAD DATA INFILE '/path-to/genres.csv'
 INTO TABLE genres
 fields terminated by ','
@@ -30,7 +29,7 @@ ignore 1 lines
  * load movies table
 
  ```
- DROP TABLE movies;
+DROP TABLE movies;
 CREATE TABLE movies(
   id INTEGER(4) NOT NULL PRIMARY KEY
 , Movie_Title VARCHAR(100)
@@ -55,7 +54,6 @@ CREATE TABLE movies(
 , War INT(1)
 , Western INT(1)
 );
-
 LOAD DATA INFILE '/path-to/movies.csv'
 INTO TABLE movies
 fields terminated by ','
@@ -96,7 +94,6 @@ CREATE TABLE occupations(
   id INTEGER(2) NOT NULL PRIMARY KEY
 , occupation VARCHAR(13)
 );
-
 LOAD DATA INFILE '/path-to/occupations.csv'
 INTO TABLE occupations
 fields terminated by ','
@@ -115,7 +112,6 @@ CREATE TABLE ratings(
 , Rating INTEGER(1)
 , PRIMARY KEY(id, Movie_ID)
 );
-
 LOAD DATA INFILE '/path-to/ratings.csv'
 INTO TABLE ratings
 fields terminated by ','
@@ -137,7 +133,6 @@ CREATE TABLE users(
 , occupation VARCHAR(13)
 , postalCode VARCHAR(5)
 );
-
 LOAD DATA INFILE '/path-to/users.csv'
 INTO TABLE users
 fields terminated by ','
